@@ -1,5 +1,3 @@
-using System.Text;
-
 namespace AdventOfCode.Solutions
 {
     public class DayThreePartTwo
