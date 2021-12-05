@@ -19,14 +19,14 @@ namespace AdventOfCode.Solutions
             // For each line, increment the grid values it crosses
             foreach (var line in input)
             {
-                if (line[0] == line[2] && line[1] != line[3])
+                if (line[0] == line[2])
                 {
                     for (int i = Math.Min(line[1], line[3]); i <= Math.Max(line[1], line[3]); i++)
                     {
                         grid[line[0], i]++;
                     }
                 }
-                else if (line[0] != line[2] && line[1] == line[3])
+                else if (line[1] == line[3])
                 {
                     for (int i = Math.Min(line[0], line[2]); i <= Math.Max(line[0], line[2]); i++)
                     {
@@ -34,24 +34,24 @@ namespace AdventOfCode.Solutions
                     }
                 } else {
                     var slope = 0;
-                    var x = 0;
-                    var y = 0;
+                    var initialX = 0;
+                    var initialY = 0;
                     if (line[0] < line[2])
                     {
                         slope = (line[3] - line[1]) / (line[2] - line[0]);
-                        x = line[0];
-                        y = line[1];
+                        initialX = line[0];
+                        initialY = line[1];
                     }
                     else
                     {
                         slope = (line[1] - line[3]) / (line[0] - line[2]);
-                        x = line[2];
-                        y = line[3];
+                        initialX = line[2];
+                        initialY = line[3];
                     }
 
                     for (int i = 0; Math.Abs(i) <= Math.Abs(line[2] - line[0]); i += slope)
                     {
-                        grid[x + Math.Abs(i), y + i]++;
+                        grid[initialX + Math.Abs(i), initialY + i]++;
                     }
                 }
             }
