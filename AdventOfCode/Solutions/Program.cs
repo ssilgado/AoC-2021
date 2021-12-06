@@ -10,3 +10,5 @@ DayFourPartOne.PrintSolution();
 DayFourPartTwo.PrintSolution();
 DayFivePartOne.PrintSolution();
 DayFivePartTwo.PrintSolution();
+DaySixPartOne.PrintSolution();
+DaySixPartTwo.PrintSolution();
