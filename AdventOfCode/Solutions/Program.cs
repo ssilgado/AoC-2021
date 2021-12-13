@@ -16,3 +16,5 @@ DaySevenPartOne.PrintSolution();
 DaySevenPartTwo.PrintSolution();
 DayEightPartOne.PrintSolution();
 DayEightPartTwo.PrintSolution();
+DayNinePartOne.PrintSolution();
+DayNinePartTwo.PrintSolution();
